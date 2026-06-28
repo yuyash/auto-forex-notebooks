@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Notebook-generated sample/market data
+data/
+
+# macOS
+.DS_Store

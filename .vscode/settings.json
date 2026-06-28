@@ -1,0 +1,20 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": false,
+  "ruff.nativeServer": "on",
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    ".ipynb_checkpoints": true,
+    ".ruff_cache": true
+  }
+}
