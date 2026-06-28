@@ -217,8 +217,13 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Notebook-generated sample/market data
-data/
+# Notebook-generated artifacts (e.g. extracted per-instrument caches).
+# Ignore everything under data/ by default...
+data/*
+# ...but keep the source quote archives, tracked via Git LFS (see .gitattributes).
+!data/quotes/
+data/quotes/*
+!data/quotes/*.csv.gz
 
 # macOS
 .DS_Store
