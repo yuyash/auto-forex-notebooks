@@ -13,7 +13,6 @@ from collections.abc import Mapping
 from decimal import Decimal
 
 from core import (
-    CurrencyPair,
     Strategy,
     StrategyAction,
     StrategyContext,
@@ -52,10 +51,9 @@ class MovingAverageCrossStrategy(Strategy):
         self,
         *,
         name: str,
-        instrument: CurrencyPair | str,
         parameters: StrategyParameters | Mapping[str, object] | None = None,
     ) -> None:
-        super().__init__(name=name, instrument=instrument, parameters=parameters)
+        super().__init__(name=name, parameters=parameters)
         self._fast_period = int(self.parameters.require("fast_period"))
         self._slow_period = int(self.parameters.require("slow_period"))
         self._units = Decimal(str(self.parameters.require("units")))
@@ -104,7 +102,7 @@ class MovingAverageCrossStrategy(Strategy):
         code = StrategyDecisionCode.ENTRY_SIGNAL if opening else StrategyDecisionCode.EXIT_SIGNAL
         return StrategyEvent(
             task_id=context.task_id,
-            instrument=self.instrument,
+            instrument=context.instrument,
             action=action,
             side=TradeSide.BUY if opening else None,
             units=self._units if opening else None,
