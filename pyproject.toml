@@ -5,6 +5,7 @@ description = "Jupyter notebooks for AutoForexV2 exploration and analysis."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "auto-forex-aws",
     "auto-forex-core",
     "auto-forex-server",
     "auto-forex-snowball",
@@ -29,6 +30,7 @@ dev = [
 ]
 
 [tool.uv.sources]
+auto-forex-aws = { path = "../aws", editable = true }
 auto-forex-core = { path = "../core", editable = true }
 auto-forex-server = { path = "../server", editable = true }
 auto-forex-snowball = { path = "../snowball", editable = true }
