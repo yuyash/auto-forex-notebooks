@@ -29,10 +29,10 @@ dev = [
 ]
 
 [tool.uv.sources]
-auto-forex-core = { path = "../core" }
-auto-forex-server = { path = "../server" }
-auto-forex-snowball = { path = "../snowball" }
-oanda = { path = "../oanda" }
+auto-forex-core = { path = "../core", editable = true }
+auto-forex-server = { path = "../server", editable = true }
+auto-forex-snowball = { path = "../snowball", editable = true }
+oanda = { path = "../oanda", editable = true }
 
 [tool.ruff]
 line-length = 100
