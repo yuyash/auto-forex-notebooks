@@ -9,4 +9,5 @@ uv sync
 uv run jupyter lab
 ```
 
-Depends on the `core`, `server`, and `oanda` packages via local path sources.
+Depends on the `core`, `server`, `snowball`, and `oanda` packages via local
+path sources.
