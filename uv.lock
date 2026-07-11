@@ -153,6 +153,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pycountry" },
     { name = "pydantic" },
+    { name = "tqdm" },
 ]
 
 [package.metadata]
@@ -162,6 +163,7 @@ requires-dist = [
     { name = "pycountry", specifier = ">=26.2.16" },
     { name = "pydantic", specifier = ">=2.13.4" },
     { name = "pyinstrument", marker = "extra == 'profiling'", specifier = ">=5.1.1" },
+    { name = "tqdm", specifier = ">=4.67.1" },
 ]
 provides-extras = ["profiling"]
 
